@@ -1,0 +1,182 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: overlay;
+    overflow-x: hidden;
+    max-width: 100vw;
+    padding-top: 80px;
+}
+:root{
+    --corPrimaria: blue;
+}
+nav{
+    background-color: var(--corPrimaria);
+    width: 100vw;
+    height: 80px;
+    position:fixed;
+    top: 0px;
+    z-index:999;
+
+}
+.navInterno{
+    display: flex;
+    /* align: alinhamento padrão vertical */
+    align-items: center;
+    /* justify: alinhamento padrão horizontal */
+    justify-content: space-between;
+    height: 100%;
+}
+.logotipo{
+    font-size: 60px;
+    color: white;   
+}
+.links{
+    display: flex;
+    gap: 15px;
+}
+.linksUni{
+    color: white;
+    text-decoration: none;
+    font-size: 120%;
+}
+@media(max-width: 576px){
+    .links{
+        flex-direction: column;
+        gap: 0px;
+        margin-right: 20px;
+    }
+    .linksUni{
+        font-size: 110%;
+    }
+}
+.linksUni:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+footer{
+    width: 100vw;
+    height: 80px;
+    background-color: var(--corPrimaria);
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copycopy{
+    color: white;
+    font-size: 18px;
+}
+.textoCabecalho{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.square{
+    width: 300px;
+    height: 300px;
+    background-color: var(--corPrimaria);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;    
+    text-decoration: none;
+    transition: all 0.25s;
+}
+.square:hover{
+    transform: scale(1.1);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.square img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;   
+}
+.caixaDeQuadrados{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.caixaDeQuadradosFilho{
+    display: flex;
+    gap: 10px;
+}
+/* define os estilos de caixaDeQuadradosFilho e square:hover quando o tamanho for menor ou igual a que for 992px */
+@media(max-width: 992px){
+    .caixaDeQuadradosFilho{
+        flex-direction: column;
+    }
+    .square:hover{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transform: scale(1.05);
+    }
+}
+.quadradoTitulo{
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 120%;
+    margin-top: 5px;
+}
+.quadradoTexto{
+    color: white;   
+    font-size: 90%;
+    text-align: center;
+}
+.caixaDeRetangulos{
+    margin-top: 35px;
+    margin-bottom: 35px;    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rectangle{
+    background: var(--corPrimaria);
+    display: flex;
+    color: white;
+    border-radius: 5px;
+    /* border:borda parametros: tamanho, tipo (bota solid por padrão) e cor*/
+    border: 3px solid black;
+}
+.rectangle img{
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+}
+.rectangleTexto{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.botaoVerMaisPai{
+    margin-top: auto;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+@media(max-width:768px){
+    .rectangle{        
+        flex-direction: column;
+    }
+    .rectangle img{
+        width: 100%;
+        height: 350px;
+    }
+}
+
+.caixaDeTexto p {
+    /*quebra linhas de acordo com a quebra de linha do HTML*/
+    white-space:pre-line;
+}
